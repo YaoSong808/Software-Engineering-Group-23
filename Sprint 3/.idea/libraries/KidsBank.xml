@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="KidsBank">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/KidsBank/out/production/KidsBank/KidsBank.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

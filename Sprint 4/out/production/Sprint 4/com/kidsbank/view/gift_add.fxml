@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane fx:id="dialogPane" expanded="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kidsbank.controller.GiftAddController">
+    <expandableContent>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+    </expandableContent>
+   <content>
+      <AnchorPane prefHeight="305.0" prefWidth="465.0" style="-fx-background-color: #64A270; -fx-border-color: #ffffff;">
+         <children>
+            <TextField fx:id="giftValueField" layoutX="147.0" layoutY="207.0" prefHeight="26.0" prefWidth="232.0" />
+            <Label fx:id="goalText" layoutX="53.0" layoutY="207.0" prefHeight="26.0" prefWidth="89.0" text="Gift Value:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="cancelGiftButton" layoutX="216.0" layoutY="260.0" mnemonicParsing="false" onAction="#cancelAddGiftAction" prefHeight="24.0" prefWidth="94.0" style="-fx-background-color: #BAB6B7;" text="Cancel">
+               <font>
+                  <Font name="Verdana" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="okGiftButton" layoutX="327.0" layoutY="260.0" mnemonicParsing="false" onAction="#okAddGiftAction" prefHeight="24.0" prefWidth="94.0" style="-fx-background-color: #BAB6B7;" text="OK">
+               <font>
+                  <Font name="Verdana" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorGiftValue" layoutX="148.0" layoutY="240.0" prefHeight="15.0" prefWidth="308.0" text="Picture or name is empty, or value is not a number!!" textFill="#ee0707" visible="false">
+               <font>
+                  <Font name="Verdana Italic" size="11.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="uploadedImage" fitHeight="107.0" fitWidth="135.0" layoutX="194.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../staticfile/gift_page.png" />
+               </image></ImageView>
+            <Label fx:id="goalText1" layoutX="53.0" layoutY="140.0" prefHeight="26.0" prefWidth="89.0" text="Gift Picture:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="uploadGiftButton" layoutX="148.0" layoutY="140.0" mnemonicParsing="false" onAction="#uploadGiftAction" prefHeight="25.0" prefWidth="231.0" style="-fx-background-color: #BAB6B7;" text="Upload a picture for the gift">
+               <font>
+                  <Font name="Verdana" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="giftName" layoutX="53.0" layoutY="174.0" prefHeight="26.0" prefWidth="89.0" text="Gift Name:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="giftNameField" layoutX="147.0" layoutY="174.0" prefHeight="26.0" prefWidth="232.0" />
+         </children></AnchorPane>
+   </content>
+</DialogPane>
