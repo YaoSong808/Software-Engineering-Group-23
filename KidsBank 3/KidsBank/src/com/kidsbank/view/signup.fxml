@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="464.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kidsbank.controller.SignupController">
+    <children>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="215.0" style="-fx-background-color: #155434;">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="loginPane" layoutY="-4.0" minHeight="0.0" minWidth="0.0" prefHeight="474.0" prefWidth="751.0" style="-fx-background-color: #155434;">
+            <children>
+                <Button fx:id="submitButton" layoutX="391.0" layoutY="381.0" mnemonicParsing="false" onAction="#doSignup" onMouseEntered="#signupMouseEntered" onMouseExited="#signupMouseExited" prefHeight="31.0" prefWidth="186.0" style="-fx-background-color: #307E54;" text="Submit" textFill="#f8f6f6">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <PasswordField fx:id="passwordAgainField" layoutX="391.0" layoutY="278.0" prefHeight="26.0" prefWidth="186.0" />
+                <Label layoutX="250.0" layoutY="195.0" text="Email" textFill="#fffefe">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="250.0" layoutY="237.0" text="Enter password" textFill="#fcf8f8">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="190.0" fitWidth="170.0" layoutX="46.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../staticfile/login.png" />
+                    </image>
+                </ImageView>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="231.0" layoutY="40.0" prefHeight="54.0" prefWidth="377.0" text="Sign Up" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            <Label layoutX="250.0" layoutY="108.0" text="First name" textFill="#fffefe">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="250.0" layoutY="150.0" text="Last name" textFill="#fffefe">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="251.0" layoutY="282.0" text="Ente password again" textFill="#fffefe">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailField" layoutX="391.0" layoutY="191.0" prefHeight="26.0" prefWidth="186.0" />
+            <TextField fx:id="lastNameField" layoutX="391.0" layoutY="146.0" prefHeight="26.0" prefWidth="186.0" />
+            <TextField fx:id="firstNameField" layoutX="391.0" layoutY="104.0" prefHeight="26.0" prefWidth="186.0" />
+            <RadioButton fx:id="parentButton" layoutX="408.0" layoutY="325.0" mnemonicParsing="false" text="Parent" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="role" />
+               </toggleGroup>
+            </RadioButton>
+            <Label layoutX="250.0" layoutY="325.0" text="Role" textFill="#fffefe">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="childButton" layoutX="507.0" layoutY="325.0" mnemonicParsing="false" selected="true" text="Child" textFill="WHITE" toggleGroup="$role" />
+            <Label fx:id="errorInfo" layoutX="391.0" layoutY="334.0" prefHeight="54.0" prefWidth="224.0" textFill="#f50505" visible="false" wrapText="true" />
+            <PasswordField fx:id="passwordField" layoutX="391.0" layoutY="233.0" prefHeight="26.0" prefWidth="186.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
