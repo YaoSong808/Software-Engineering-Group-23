@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="610.0" style="-fx-background-color: #307E54;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kidsbank.controller.TaskCompletedController">
+   <children>
+      <TableView fx:id="taskList" layoutX="28.0" layoutY="18.0" prefHeight="281.0" prefWidth="541.0">
+        <columns>
+          <TableColumn fx:id="taskNoColumn" editable="false" prefWidth="38.0" text="No." />
+          <TableColumn fx:id="taskNameColumn" editable="false" prefWidth="335.0" text="Tasks" />
+            <TableColumn fx:id="taskValueColumn" editable="false" minWidth="0.0" prefWidth="48.0" text="Value" />
+            <TableColumn fx:id="completedTimeColumn" editable="false" prefWidth="119.0" text="Completed Time" />
+        </columns>
+      </TableView>
+   </children>
+   <opaqueInsets>
+      <Insets left="50.0" />
+   </opaqueInsets>
+</AnchorPane>
