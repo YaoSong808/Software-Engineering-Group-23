@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="380.0" prefWidth="580.0" style="-fx-background-color: #307E54;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kidsbank.controller.TaskOpenController">
+   <children>
+      <TableView layoutX="35.0" layoutY="23.0" prefHeight="335.0" prefWidth="511.0">
+        <columns>
+          <TableColumn editable="false" prefWidth="38.0" text="No." />
+          <TableColumn editable="false" prefWidth="268.0" text="Task Name" />
+            <TableColumn editable="false" prefWidth="63.0" text="Value" />
+            <TableColumn editable="false" prefWidth="57.0" text="Operation" />
+            <TableColumn editable="false" prefWidth="71.0" text="Update" />
+        </columns>
+      </TableView>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets left="50.0" />
+   </padding>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="620.0" style="-fx-background-color: #307E54;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kidsbank.controller.MenuController">
+   <children>
+      <Line endX="424.5" layoutX="140.0" layoutY="538.0" startX="-100.0" stroke="#64a270" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="222.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../staticfile/gift_page.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="121.0" layoutY="182.0" prefHeight="19.0" prefWidth="392.0" text="Sally, explore, shop, redeem. You deserve it!" textFill="WHITE">
+         <font>
+            <Font name="Verdana Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

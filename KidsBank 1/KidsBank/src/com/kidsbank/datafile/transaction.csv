@@ -1,0 +1,18 @@
+﻿event,type,eventvalue,eventID,userID,createtime,modifiedtime
+Implement_Tasks,positive,300,900001,321,2024/2/6 16:40,2024/2/6 16:40
+Implement_Tasks_ID,id,50001,900001,321,2024/2/6 16:40,2024/2/6 16:40
+Redeem_Gifts,negative,10,900002,321,2024/3/6 16:40,2024/3/6 16:40
+Redeem_Gifts_ID,id,60001,900002,321,2024/3/6 16:40,2024/3/6 16:40
+FixedDeposit_Value,save,200,900003,321,2022/3/02 16:40,2024/3/6 16:40
+FixedDeposit_ID,id,70001,900003,321,2024/2/6 16:40,2024/2/6 16:40
+FixedDeposit_StartTime,time,2022/3/02 16:40,900003,321,2024/2/6 16:40,2024/2/6 16:40
+FixedDeposit_EndTime,time,2024/3/02 16:40,900003,321,2024/2/6 16:40,2024/2/6 16:40
+FixedDeposit_Interest,positive,10,900003,321,2024/2/6 16:40,2024/2/6 16:40
+Implement_Tasks,positive,20,900004,321,2024/2/6 16:40,2024/2/6 16:40
+Implement_Tasks_ID,id,50002,900004,321,2024/2/6 16:40,2024/2/6 16:40
+Implement_Tasks,positive,30,900005,321,2024/2/6 16:40,2024/2/6 16:40
+Implement_Tasks_ID,id,50003,900005,321,2024/2/6 16:40,2024/2/6 16:40
+Implement_Tasks,positive,30,900006,321,2024/3/6 16:40,2024/3/6 16:40
+Implement_Tasks_ID,id,50004,900006,321,2024/3/6 16:40,2024/3/6 16:40
+Implement_Tasks,positive,200,900007,321,2024/4/6 16:40,2024/4/6 16:40
+Implement_Tasks_ID,id,50005,900007,321,2024/4/6 16:40,2024/4/6 16:40
