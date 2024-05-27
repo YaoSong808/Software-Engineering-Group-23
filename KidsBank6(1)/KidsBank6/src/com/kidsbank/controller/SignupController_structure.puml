@@ -1,0 +1,257 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "com.kidsbank.controller.SignupController",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_827112919 { 
+   	label=kidsbank
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Main14625802[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Main</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ changeView(fxmlFile: String, title: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
+<TR><TD ALIGN="LEFT" >+ opnNewView(fxmlFile: String, title: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ start(stage: Stage)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+subgraph cluster_1371265191 { 
+   	label=util
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   ButtonHandle703749882[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ButtonHandle</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ labelClick(label: Label)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ mouseEntered(button: Button)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ mouseExited(button: Button)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ unlinkButtonAction(button: Button, userName: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+CSVFileHandler703749882[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)CSVFileHandler</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ addDataToCSV(filePath: String, newData: String[])</TD></TR>
+<TR><TD ALIGN="LEFT" >+ deleteSingleLine(filePath: String, id: String, idColumn: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getCSVMultipleValue(filePath: String, columnValue: String, column1: int, column2: int): List&lt;String&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getCSVMultipleValue2(filePath: String, columnValue1: String, column1: int, columnValue2: String, column2: int, column3: int): List&lt;String&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getCSVMultipleValue3(filePath: String, columnValue1: String, column1: int, columnValue21: String, columnValue22: String, columnValue23: String, column2: int, months: int, column3: int, column4: int): List&lt;String&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getCSVRowCount(filePath: String): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getCSVSingleValue(filePath: String, columnValue: String, column1: int, column2: int): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getCSVSingleValue2(filePath: String, columnValue1: String, column1: int, columnValue2: String, column2: int, column3: int): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getGiftList(filePath: String, data1: String, column1: int, data2: String, column2: int): List&lt;GiftInfo&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getLastRowColumnValue(filePath: String, colNum: int): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getTasksList(filePath: String, data1: String, column1: int, data2: String, column2: int): List&lt;TaskInfo&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ isLastLineEmpty(filePath: String): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ updateSingleDataToCSV(filePath: String, newData: String, column: int, id: String, idColumn: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ updateSingleDataToCSV2(filePath: String, newData: String, column: int, column1Value: String, column1: int, column2Value: String, column2: int)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+GetTime703749882[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)GetTime</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ compareWithCurrentTime(time: String): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ compareWithSpecificTime(specificTime: String, months: int): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ convertTimeFormat(oldFormatDate: String): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getFutureTime(year: String): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+PageLoader703749882[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)PageLoader</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   view: Pane [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ getPage(fxmlFile: String): Pane</TD></TR>
+<TR><TD ALIGN="LEFT" >+ gotoPage(viewName: String, button: Button)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+StringUtil703749882[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)StringUtil</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ isEmpty(text: String): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ isNumeric(str: String): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ isSame(text1: String, text2: String): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ isValidEmail(email: String): boolean</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+VerifyAccount703749882[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)VerifyAccount</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ isValidAccount(username: String, password: String): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ isValidLinkAccount(username: String, linkcode: String): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ notExist(username: String): boolean</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_43613313 { 
+   	label=controller
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   SignupController66631828[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)SignupController</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   accountRole: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   childButton: RadioButton [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   emailField: TextField [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   errorInfo: Label [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   firstNameField: TextField [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   lastNameField: TextField [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   parentButton: RadioButton [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   passwordAgainField: PasswordField [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   passwordField: PasswordField [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   role: ToggleGroup [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   submitButton: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   userID: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- doSignup()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ signupMouseEntered()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ signupMouseExited()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+ButtonHandle703749882 -> CSVFileHandler703749882[label="unlinkButtonAction() -> updateSingleDataToCSV()"];
+ButtonHandle703749882 -> PageLoader703749882[label="unlinkButtonAction() -> gotoPage()"];
+CSVFileHandler703749882 -> GetTime703749882[label="getCSVMultipleValue3() -> compareWithSpecificTime()"];
+CSVFileHandler703749882 -> PageLoader703749882[label="getTasksList() -> gotoPage()"];
+SignupController66631828 -> Main14625802[label="doSignup() -> changeView()"];
+SignupController66631828 -> VerifyAccount703749882[label="doSignup() -> notExist()"];
+    
+}
+@enduml

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kidsbank.controller.GiftRedeemController">
+   <children>
+      <ScrollPane fx:id="scrollPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="590.0" style="-fx-background-color: #307E54;">
+         <content>
+            <AnchorPane fx:id="giftSubPane" minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="620.0" style="-fx-background-color: #307E54;">
+               <children>
+                  <Pane fx:id="firstPane" layoutX="16.0" layoutY="6.0" prefHeight="161.0" prefWidth="127.0" style="-fx-background-color: #64A270; -fx-background-radius: 10;">
+                     <children>
+                        <Circle fx:id="circle" fill="#155434" layoutX="64.0" layoutY="81.0" radius="38.0" stroke="#155434" strokeType="INSIDE" />
+                        <Label layoutX="32.0" layoutY="20.0" text="My Balance" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="7.0" layoutY="133.0" text="Shop my Balance" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="11.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../staticfile/arrow.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="myBalance" alignment="CENTER" layoutX="33.0" layoutY="62.0" onMouseClicked="#gotoAccount" prefHeight="30.0" prefWidth="62.0" text="288" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="52.0" layoutY="98.0" text="RMB" textFill="WHITE">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
