@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.kidsbank"},{"l":"com.kidsbank.controller"},{"l":"com.kidsbank.entity"},{"l":"com.kidsbank.util"}];updateSearchResults();
