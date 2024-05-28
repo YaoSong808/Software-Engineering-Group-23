@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="620.0" style="-fx-background-color: #307E54;" styleClass="-fx-text-inner-color: #36da82" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kidsbank.controller.DepositController">
+   <children>
+      <ScrollPane fx:id="scrollPane" layoutX="238.0" layoutY="270.0" prefHeight="327.0" prefWidth="402.0" style="-fx-background-color: #307E54;">
+        <content>
+          <AnchorPane fx:id="depositListPane" minHeight="0.0" minWidth="0.0" prefHeight="435.0" prefWidth="387.0" style="-fx-background-color: #307E54;">
+               <children>
+                  <Label fx:id="noDepositPrompt" alignment="CENTER" contentDisplay="CENTER" layoutY="64.0" prefHeight="20.0" prefWidth="385.0" text="No any fixed deposit!" textAlignment="CENTER" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+      <Pane layoutX="30.0" layoutY="300.0" prefHeight="158.0" prefWidth="202.0" style="-fx-background-radius: 20; -fx-background-color: #64A270;">
+         <children>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="23.0" prefWidth="175.0" text="Interest on Deposit" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="no1Interest" alignment="CENTER_RIGHT" editable="false" layoutX="120.0" layoutY="37.0" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: #64A270;" styleClass="-fx-text-inner-color: #36da82" text="5%">
+               <font>
+                  <Font name="Verdana Bold" size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="no2Interest" alignment="CENTER_RIGHT" editable="false" layoutX="120.0" layoutY="68.0" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: #64A270;" styleClass="-fx-text-inner-color: #36da82" text="10%">
+               <font>
+                  <Font name="Verdana Bold" size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="no3Interest" alignment="CENTER_RIGHT" editable="false" layoutX="120.0" layoutY="102.0" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: #64A270;" styleClass="-fx-text-inner-color: #36da82" text="15%">
+               <font>
+                  <Font name="Verdana Bold" size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="saveTimeName1" editable="false" layoutX="14.0" layoutY="37.0" prefHeight="31.0" prefWidth="105.0" style="-fx-background-color: #64A270;" styleClass="-fx-text-inner-color: #36da82" text="Half Year">
+               <font>
+                  <Font name="Verdana" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="saveTimeName2" editable="false" layoutX="14.0" layoutY="68.0" prefHeight="31.0" prefWidth="105.0" style="-fx-background-color: #64A270;" styleClass="-fx-text-inner-color: #36da82" text="One Years">
+               <font>
+                  <Font name="Verdana" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="saveTimeName3" editable="false" layoutX="14.0" layoutY="102.0" prefHeight="31.0" prefWidth="105.0" style="-fx-background-color: #64A270;" styleClass="-fx-text-inner-color: #36da82" text="Two Years">
+               <font>
+                  <Font name="Verdana" size="13.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane layoutX="30.0" layoutY="100.0" prefHeight="158.0" prefWidth="202.0" style="-fx-background-radius: 20; -fx-background-color: #64A270;">
+         <children>
+            <Label alignment="CENTER" layoutX="3.0" layoutY="14.0" prefHeight="23.0" prefWidth="207.0" text="Total Fixed Deposit" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="28.0" layoutY="50.0" prefHeight="31.0" prefWidth="61.0" text="RMB" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="95.0" prefHeight="31.0" prefWidth="61.0" text="Interest income:" textAlignment="CENTER" textFill="#084027" wrapText="true">
+               <font>
+                  <Font name="Verdana" size="11.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="118.0" layoutY="95.0" prefHeight="31.0" prefWidth="76.0" text="Avaliable to transfer:" textAlignment="CENTER" textFill="#eff5f2" wrapText="true">
+               <font>
+                  <Font name="Verdana" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="fixedDepositLabel" layoutX="89.0" layoutY="50.0" prefHeight="31.0" prefWidth="105.0" text="200.00" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="depositIncomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="130.0" prefHeight="14.0" prefWidth="95.0" text="RMB22.00" textAlignment="CENTER" textFill="#084027" wrapText="true">
+               <font>
+                  <Font name="Verdana" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="avaliableDepositLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="109.0" layoutY="130.0" prefHeight="14.0" prefWidth="85.0" text="RMB100.00" textAlignment="CENTER" textFill="#eff5f2" wrapText="true">
+               <font>
+                  <Font name="Verdana" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="77.0" fitWidth="91.0" layoutX="37.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../staticfile/deposit_page.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="headerPane" prefHeight="38.0" prefWidth="620.0" style="-fx-background-color: #64A270;" visible="false">
+         <children>
+            <Label fx:id="childDataPrompt" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="6.0" prefHeight="26.0" prefWidth="402.0" text="This is your default child account data!" textFill="#ffcc02" visible="false" wrapText="true">
+               <font>
+                  <Font name="Verdana Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="changeButton" layoutX="528.0" layoutY="6.0" mnemonicParsing="false" onAction="#changeButtonAction" onMouseEntered="#changeMouseEntered" onMouseExited="#changeMouseExited" style="-fx-background-color: #155434; -fx-background-radius: 60;" text="Change" textFill="WHITE" visible="false" />
+         </children>
+      </Pane>
+      <ChoiceBox fx:id="depositChoiceBox" layoutX="304.0" layoutY="103.0" prefHeight="26.0" prefWidth="219.0" />
+      <TextField fx:id="depositTransferValue" layoutX="304.0" layoutY="141.0" prefHeight="26.0" prefWidth="219.0" promptText="Please fill the deposit amount" />
+      <Button fx:id="transferButton" layoutX="304.0" layoutY="179.0" mnemonicParsing="false" onAction="#transferButtonAction" prefHeight="26.0" prefWidth="219.0" style="-fx-background-color: #155434;" text="Transfer" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </Button>
+      <Line endX="463.5" layoutX="137.0" layoutY="564.0" startX="-100.0" stroke="#64a270" />
+      <Label alignment="CENTER" layoutX="254.0" layoutY="236.0" prefHeight="38.0" prefWidth="50.0" text="Deposit Amount" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="11.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="333.0" layoutY="233.0" prefHeight="44.0" prefWidth="50.0" text="Held Time (year/s)" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="11.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="416.0" layoutY="236.0" prefHeight="38.0" prefWidth="61.0" text="Start Time/ End Time" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="11.0" />
+         </font></Label>
+      <Line endX="173.5" layoutX="411.0" layoutY="270.0" startX="-156.5" stroke="#64a270" />
+      <Label fx:id="promptLabel" layoutX="15.0" layoutY="467.0" prefHeight="17.0" prefWidth="232.0" text="Note: You can edit the interest as parent account." textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="517.0" layoutY="236.0" prefHeight="38.0" prefWidth="61.0" text="Status or Actions" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="promptMessage" alignment="CENTER" layoutX="232.0" layoutY="82.0" prefHeight="17.0" prefWidth="385.0" text="The deposit amount cannot be blank!" textAlignment="CENTER" textFill="#9e1012" visible="false" />
+   </children>
+</AnchorPane>

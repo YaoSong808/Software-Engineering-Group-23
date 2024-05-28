@@ -4,10 +4,10 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/KidsBank/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/KidsBank/src/test" isTestSource="true" />
     </content>
-    <orderEntry type="jdk" jdkName="19" jdkType="JavaSDK" />
+    <orderEntry type="jdk" jdkName="20" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="junit.jupiter" level="project" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
@@ -20,5 +20,6 @@
     </orderEntry>
     <orderEntry type="library" exported="" name="lib" level="project" />
     <orderEntry type="library" exported="" name="lib1" level="project" />
+    <orderEntry type="library" exported="" name="junit.jupiter1" level="project" />
   </component>
 </module>

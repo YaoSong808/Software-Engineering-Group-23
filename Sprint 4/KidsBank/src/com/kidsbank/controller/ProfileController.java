@@ -49,30 +49,30 @@ public class ProfileController {
     private void initialize() throws FileNotFoundException {
         String userId = UserInfo.getInstance().getUserId();
         String role = UserInfo.getInstance().getRole();
-
+        //获得当前用户的ID和角色
         String fileName = FileName.accountFile;
         String firstName = CSVFileHandler.getCSVSingleValue(fileName,userId,1,4);
         String lastName = CSVFileHandler.getCSVSingleValue(fileName,userId,1,5);
-        String parentId = CSVFileHandler.getCSVSingleValue(fileName,userId,1,8);
-        String linkCode = CSVFileHandler.getCSVSingleValue(fileName,userId,1,14);
+        String parentId = CSVFileHandler.getCSVSingleValue(fileName,userId,1,8);//家长id
+        String linkCode = CSVFileHandler.getCSVSingleValue(fileName,userId,1,14);//链接代码
         String parentAccount = CSVFileHandler.getCSVSingleValue(fileName,parentId,1,2);
-
+        //从CSV里读取用户信息包含名字、姓氏、家长ID和链接代码
         firstNameField.setText(firstName);
         lastNameField.setText(lastName);
         parentField.setText(parentAccount);
         linkCodeField.setText(linkCode);
-
+        //将读取到的信息设置到对应的文本框中
         parentField.setDisable(true);
         linkCodeField.setDisable(true);
-
+        //禁用家长的界面
         if (role.equals("parent") || role.isEmpty()) {
             parentField.setVisible(false);
             linkCodeField.setVisible(false);
             parentLabel.setVisible(false);
             linkLabel.setVisible(false);
         }
+        //如果是用户是家长，则隐藏相关字段和标签
 
-        // 加载头像, 如果用户不曾上传头像，使用默认头像
 
         String profilePicture = FileName.defaultUploadDir + UserInfo.getInstance().getUserId()+"_profile.png";
         File file = new File (profilePicture);
@@ -82,17 +82,19 @@ public class ProfileController {
         }
         Image image = new Image("file://" +profilePicture);
         myProfilePicture.setImage(image);
+        // 加载头像, 如果用户不曾上传头像，使用默认头像
 
 
-       // 添加First Name 值变化事件监听器
         firstNameField.textProperty().addListener((observable, oldValue, newValue) -> {
+            // 添加First Name 值变化事件监听器
 
-          // 在这里执行保存新值的操作
            CSVFileHandler.updateSingleDataToCSV(FileName.accountFile,String.valueOf(newValue), 4, userId, 1);
+           // 在这里执行保存新值的操作
        });
 
-        // 添加Last Name 值变化事件监听器
+
         lastNameField.textProperty().addListener((observable, oldValue, newValue) -> {
+            // 添加Last Name 值变化事件监听器
 
             // 在这里执行保存新值的操作
             CSVFileHandler.updateSingleDataToCSV(FileName.accountFile,String.valueOf(newValue), 5, userId, 1);
@@ -106,12 +108,12 @@ public class ProfileController {
     @FXML
     private void changePictureAction() throws IOException {
 
-        // 创建文件选择器
+
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Select a picture file");
+        // 创建文件选择器
 
-        // 设置文件选择器的文件类型过滤器
-        fileChooser.getExtensionFilters().addAll( new FileChooser.ExtensionFilter("Image File","*.jpg","*.png"));
+        fileChooser.getExtensionFilters().addAll( new FileChooser.ExtensionFilter("Image File","*.jpg","*.png")); // 设置文件选择器的文件类型过滤器
 
         // 获得当前的stage, 显示文件选择器，并获取用户选择的文件
         File selectFile = new File("");
